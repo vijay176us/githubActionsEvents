@@ -5,7 +5,7 @@ on:
       - 'main'
       - 'releases/**'
     paths:
-      '.github/workflows/*'
+      '.github/workflows/*'  ## This will trigger the workflow only if any of the workflow file is changed
 jobs:
   Build_Deploy:
     runs-on: ubuntu-latest
