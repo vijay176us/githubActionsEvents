@@ -7,7 +7,9 @@ jobs:
   Output_event_details:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
       - name: Output github context
-        run: echo ${{ toJson(github) }}
+        run: echo "${{ toJson(github) }}"
       - name: Output event details
-        run: echo ${{ toJson(github.event) }}
+        run: echo "${{ toJson(github.event) }}"
