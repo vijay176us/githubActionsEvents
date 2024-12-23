@@ -1,5 +1,5 @@
 name: Output event details
-on: [issues]
+on: [issues, workflow_dispatch]
 #   pull_request:
 #     branches:
 #       - main
