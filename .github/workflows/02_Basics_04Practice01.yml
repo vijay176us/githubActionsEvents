@@ -9,16 +9,13 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-
       - name: Install Dependencies
         run: npm ci
-
       - name: Checking Lint for the Code
         run: npm run lint
-
       - name: Testing the Code
         run: npm run test
-
       - name: Build the Code
         run: npm run build
-
+      - name: Deploy the Code
+        run: echo "Deploying.............."
