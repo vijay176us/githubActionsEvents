@@ -1,8 +1,11 @@
 name: Build_Deploy_Code
-on: [push]
-#   pull_request:
-#     branches:
-#       - main
+on: 
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
+    paths:
+      '.github/workflows/*'
 jobs:
   Build_Deploy:
     runs-on: ubuntu-latest
