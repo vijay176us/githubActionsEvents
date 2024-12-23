@@ -1,0 +1,13 @@
+name: Output event details
+on: [issues]
+#   pull_request:
+#     branches:
+#       - main
+jobs:
+  Output_event_details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output github context
+        run: echo ${{ toJson(github) }}
+      - name: Output event details
+        run: echo ${{ toJson(github.event) }}
